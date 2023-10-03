@@ -1,6 +1,6 @@
 import sqlite3
 
-# Conection with database "test.db" if exists, else, create it
+# Connection with database "test.db" if exists, else, create it
 conn = sqlite3.connect('test.db')
 
 # drop table "suscriptores" if existe to prevent future errors
@@ -30,5 +30,5 @@ print(cursor.fetchall())
 cursor.execute("SELECT * FROM suscriptores")
 print(cursor.fetchall())
 
-# Close conection with database
+# Close connection with database
 conn.close()
