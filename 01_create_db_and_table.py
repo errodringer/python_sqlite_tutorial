@@ -26,6 +26,11 @@ cursor = conn.cursor()
 cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
 print(cursor.fetchall())
 
+# Column names
+query = cursor.execute("SELECT * From suscriptores")
+cols = [column[0] for column in query.description]
+print(cols)
+
 # Select all columns from table "suscriptores"
 cursor.execute("SELECT * FROM suscriptores")
 print(cursor.fetchall())
