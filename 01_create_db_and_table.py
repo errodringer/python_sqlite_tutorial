@@ -4,6 +4,11 @@ conn = sqlite3.connect('test.db')
 
 # create empty table "suscriptores"
 query = '''
+DROP TABLE if exists suscriptores
+'''
+conn.execute(query)
+
+query = '''
 CREATE TABLE if not exists suscriptores
 (ID         INT PRIMARY KEY NOT NULL,
 nombre      TEXT            NOT NULL,
